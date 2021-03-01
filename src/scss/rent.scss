@@ -1,0 +1,138 @@
+@mixin triggers($url){
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top:-30%;
+  transform: translateY(-50%);
+  background:$url;
+  cursor: pointer;
+}
+
+.rent{
+padding-bottom: 108px;
+
+  &__title{
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &__line{
+    display: inline-block;
+    margin-right: 40px;
+    padding-top: 13px;
+
+  }
+  &__line1 {
+    border: 3px solid #005BC1;
+    max-width:100px ;
+    width: 100px;
+    margin-bottom: 13px;
+  }
+  &__line2{
+    border: 3px solid #005BC1;
+    max-width:50px ;
+    width: 50px;
+  }
+  &__text{
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #343434;
+  }
+&__info{
+  max-width: 350px;
+  max-height: 175px;
+  height: 175px;
+  padding: 110px 95px 217px 0;
+  width: 350px;
+}
+  &__deskr{
+    font-family: $OpenSans300;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #343434;
+    width: 350px;
+    height: 175px;
+  }
+  &__Heading{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #343434;
+    padding: 42px 56px 30px 30px;
+  }
+  &__block{
+    max-width: 665px;
+    max-height: 394px;
+    border: 3px solid #005BC1;
+    box-sizing: border-box;
+
+  }
+
+  &__box{
+    display: flex;
+    max-width: 665px;
+    max-height: 394px;
+
+  }
+  .sliderContainer{
+    max-width:255px ;
+    max-height: 250px;
+    margin: 20px;
+  }
+  &__img{
+    border: none;
+  }
+  &__boxing{
+    margin-left: 10px;
+  }
+  &__headingnew{
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #343434;
+  }
+  &__descrnew{
+    font-family: $OpenSans300;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #343434;
+    //margin-bottom: 10px;
+
+  }
+  &__li{
+    margin-bottom: 10px;
+  }
+
+  .owl-nav{
+    margin-top: 0;
+    .owl1PrevBtn{
+      @include triggers(url( '../image/rent/left.png') center/cover);
+      right: -167px;
+
+
+    }
+    .owl1NextBtn{
+      @include triggers(url( '../image/rent/right.png') center/cover);
+      right: -220px;
+
+    }
+  }
+
+}

@@ -1,0 +1,114 @@
+@mixin triggers($url){
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top:-18%;
+  transform: translateY(-50%);
+  background:$url;
+  cursor: pointer;
+}
+
+.slider{
+  padding: 156px 0 70px;
+   &__project{
+display: flex;
+     margin-bottom: 40px;
+   }
+  &__line{
+    display: inline-block;
+    margin-right: 40px;
+    padding-top: 13px;
+
+  }
+  &__line1 {
+    border: 3px solid #005BC1;
+    max-width:100px ;
+    width: 100px;
+    margin-bottom: 13px;
+  }
+    &__line2{
+      border: 3px solid #005BC1;
+      max-width:50px ;
+      width: 50px;
+    }
+
+
+  &__text{
+    font-family: $Oswald400;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    /* black */
+
+    color: #343434;
+  }
+  &__box1{
+    max-width: 250px;
+    max-height: 110px;
+    left:220px;
+    top:70%;
+    position: absolute;
+    background: #FFFFFF;
+    box-sizing: border-box;
+
+    text-align: left;
+  }
+  &__inform{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #343434;
+    margin: 10px 10px 5px 10px ;
+  }
+  &__subtitle{
+    font-family:$OpenSans300;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #343434;
+    margin: 10px 10px 5px 10px ;
+  }
+
+  .sliderContainer{
+    max-width: 1110px;
+    margin: 0 auto;
+
+    #slider{
+      .owl-item{
+       padding-right:40px;
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+        img{
+          width: 100%;
+        }
+
+      .owl-nav{
+        margin-top: 0;
+        .owlPrevBtn{
+          @include triggers(url( '../image/slider/left.png') center/cover);
+          right: 52px;
+          font-size: 10px;
+
+
+        }
+        .owlNextBtn{
+          @include triggers(url( '../image/slider/right.png') center/cover);
+          right: 0;
+
+        }
+      }
+    }
+
+   }
+
+   }
